@@ -1,5 +1,7 @@
 # mmdvm-spec-fw
+
 this is the readme for mmdvm special fw.
+
 connect dual_hs to Rpi；
 
 BOOT0=1 BOOT1=0 reset / or power on；
@@ -10,7 +12,7 @@ rpi-rw
 
 sudo -s
 
-curl -OL https://github.com/BG4TGO/STM32_DVM-fw/releases/download/v1.0.1/stm32-dvm_105.hex
+curl -OL https://github.com/BG7FBI/mmdvm-spec-fw/releases/download/1.0/mmdvm.hex
 
 pistar-watchdog.service stop
 
@@ -20,4 +22,4 @@ systemctl stop mmdvmhost.service
 
 stm32flash /dev/ttyAMA0
 
-stm32flash -w stm32-dvm_105.hex -v -g 0 /dev/ttyAMA0
+stm32flash -w mmdvm.hex -v -g 0 /dev/ttyAMA0
